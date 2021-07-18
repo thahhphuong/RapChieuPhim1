@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+  <body>
+    <nav class="menu">
+        <div class="container">
+            <div class="line top">
+                <div>Danh sách cụm rạp</div>
+            </div>
+            <div >
+                <ul>
+                    <!-- rap, cumrap, suatchieu -->
+                    <!-- for CumRap -->
+                    <% cumrap.map(item=>{ %>
+                        <li ><a href="#"><%= item.TenCum %><i></i></a>
+                            <!-- Modal -->
+                            <div>
+                                <div >
+                                    <div>
+                                        <!-- forRap lay theo ID CumRap -->
+                                        <a href="/category/thongtinrap?id=<%= item.id %>">
+                                            <%= item.Ten %>
+                                        </a>
+                                                  <table class="table">
+                                                    <thead>
+                                                      <tr>
+                                                        <th scope="col">Loại Rạp</th>
+                                                        <th scope="col">Tên Rạp</th>
+                                                        <th scope="col">Thời Gian Bắt Đầu</th>
+                                                        <th scope="col">Thời Gian Kết Thúc</th>
+                                                        <th scope="col">Mua Vé</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <% suatchieu_.map(itemrap=>{ %>
+                                                        <% if(itemrap.Rap.CumRapId == item.id){ %>
+                                                    <tbody>
+                                                      <tr>
+                                                        <th scope="row"><%= itemrap.Rap.LoaiRap %></th>
+                                                        <td><%= itemrap.Rap.Ten %></td>
+                                                        <td><%= itemrap.ThoiGianBatDau %></td>
+                                                        <td><%= itemrap.ThoiGianKetThuc %></td>
+                                                        <td><a href="/auth/ve?IDRap=<%= itemrap.Rap.id%>&IDSuatChieu=<%= itemrap.id %>">Đặt Chỗ</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                    <% } %>      
+                                        <% }) %>
+                                                 </table>   
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </body>
+</html> 

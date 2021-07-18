@@ -1,0 +1,48 @@
+<section class="best-of-the-week">
+    <nav class="menu">
+        <div class="container">
+            <div class="line top">
+                <div>Danh sách cụm rạp</div>
+            </div>
+            <div id="menu-list">
+                <ul class="nav-list">
+                    <!-- rap, cumrap, suatchieu -->
+                    <!-- for CumRap -->
+                    <% cumrap.map(item=>{ %>
+                        <li class="dropdown magz-dropdown magz-dropdown-megamenu"><a href="#"><%= item.Ten %><i
+                                        class="ion-ios-arrow-right"></i></a>
+                            <!-- Modal -->
+                            <div class="dropdown-menu megamenu">
+                                <div class="megamenu-inner">
+                                    <div class="row">
+                                        <% suatchieu__.map(itemrap=>{ %>
+                                            <% if(itemrap.Rap.CumRapId == item.id){ %>
+                                                <div class="col-md-3">
+                                                    <h2 class="megamenu-title"><%= itemrap.Rap.Loai %></h2>
+                                                    <ul class="vertical-menu">
+                                                        <li><a href="#"><%= itemrap.Rap.Ten %></a></li>
+                                                        <table class="table table-dark">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="/category/ghe?IDRap=<%= itemrap.Rap.id %>&IDSuatChieu=<%= itemrap.id %>"><%= itemrap.ThoiDiemBatDau %>
+                                                                        - <%= itemrap.ThoiDiemKetThuc %> <i
+                                                                                class="ion-ios-arrow-right"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </ul>
+                                                </div>
+                                            <% } %>
+                                        <% }) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>

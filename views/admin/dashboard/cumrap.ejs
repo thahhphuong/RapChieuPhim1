@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">Cụm Rạp
+                <a href="insertcumrap" class="btn btn-success btn-circle pull-left">
+                    <i>+</i>
+                </a>
+            </h1>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên Rạp</th>
+                                <th>Địa Chỉ</th>
+                                <th>Xóa</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% cumraps.map(item =>{ %>
+                            <tr>
+                                <td><%= item.id %></td>
+                                <td><%= item.Ten %></td>
+                                <td><%= item.DiaChi %></td>
+                                <td>
+                                    <form method="POST" action="/insert/deletecumrap/<%= item.id %>">
+                                        <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link" href="index">
+                <span>Trở về màn hình admin</span>
+            </a>
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+</body>
+</html>
+<!-- End of Main Content -->

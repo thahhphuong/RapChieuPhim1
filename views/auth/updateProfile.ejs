@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/css/flaticon.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/css/odometer.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>Boleto  - Online Ticket Booking Website HTML Template</title>
+
+</head>
+
+<body>
+    <!-- ==========Preloader========== -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ==========Preloader========== -->
+    
+    <!-- ==========Sign-In-Section========== -->
+    <section class="account-section bg_img" data-background="./assets/images/account/account-bg.jpg">
+        <div class="container">
+            <div class="padding-top padding-bottom">
+                <div class="account-area">
+                    <div class="section-header-3">
+                        <span class="cate">Thông tin cá nhân</span>
+                      
+                    </div>
+                    <% if (currentUser) %>
+                    <form action="/auth/updateProfile" method="post">
+                        <div class="form-group">
+                            <label for="">Email<span>*</span></label>
+                            <input type="text" name="email" placeholder="Enter Your Email" id="email2" value="<%-currentUser.Email%>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tên của bạn <span>*</span></label>
+                            <input type="text" placeholder="Tên" value="<%-currentUser.username%>" name="username"  required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Số điện thoại <span>*</span></label>
+                            <input type="text" name="PhoneNumber" placeholder="Số điện thoại" value="<%-currentUser.PhoneNumber%>" name="PhoneNumber" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Lưu</button>
+                        <div class="form-group text-center">
+                            <a href="/auth/change-password">Thay đổi mật khẩu</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Sign-In-Section========== -->
+
+
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="../../assets/js/plugins.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../../assets/js/magnific-popup.min.js"></script>
+    <script src="../../assets/js/owl.carousel.min.js"></script>
+    <script src="../../assets/js/wow.min.js"></script>
+    <script src="../../assets/js/countdown.min.js"></script>
+    <script src="../../assets/js/odometer.min.js"></script>
+    <script src="../../assets/js/viewport.jquery.js"></script>
+    <script src="../../assets/js/nice-select.js"></script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- <form action="/auth/updateProfile" method="post">
+    <div class="text-center">
+        <h1 class="h4 text-gray-900 mb-4">Thông tin cá nhân</h1>
+    </div>
+    <% if (currentUser) %>
+    <div class="form-group row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <label for="">Tên Của Bạn</label>
+            <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                   placeholder="Tên" value="<%-currentUser.username%>" name="username">
+        </div>
+        <div class="col-sm-6">
+            <label for="">Số Điện Thoại</label>
+            <input type="text" class="form-control form-control-user" id="exampleLastName"
+                   placeholder="Số điện thoại" value="<%-currentUser.PhoneNumber%>" name="PhoneNumber">
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                       placeholder="Email Address" value="<%-currentUser.Email%>" name="email">
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <div class="option">
+         <a href="/auth/change-password">Thay đổi mật khẩu</a>
+    </div> 
+
+</form> -->

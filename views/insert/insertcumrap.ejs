@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+    <body>    
+        <div class="container-fluid">
+            <h1 class="h3 mb-2 text-gray-800">Thêm Cụm Rạp</h1>
+            <div class="row justify-content-center">
+
+                <div class="col-xl-8 col-lg-12 col-md-9">
+                    <form class="user" action="/insert/insertcumrap" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="TenCumRap"
+                                aria-describedby="emailHelp" placeholder="Tên Cụm Rạp...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="DiaChi"
+                                aria-describedby="emailHelp" placeholder="Địa Chỉ Rạp...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Lưu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

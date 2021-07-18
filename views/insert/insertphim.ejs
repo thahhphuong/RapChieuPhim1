@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+    <body>
+        <div class="container-fluid">
+            <h1 class="h3 mb-2 text-gray-800">Thêm Phim</h1>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-12 col-md-9">
+                    <form  action="/insert/insertphim" method="POST" enctype="multipart/form-data" >
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="Ten"
+                                placeholder="Tên phim">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                name="NgayCongChieu"
+                                placeholder="Ngày Công Chiếu">
+                        </div>
+                        <div class="form-group">
+                            <label for="Poster">&nbsp;</label>
+                            <input type="file" id="Poster" name="Poster" class="form-control-file border">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="ThoiLuong"
+                                placeholder="Thời lượng">
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Lưu">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
